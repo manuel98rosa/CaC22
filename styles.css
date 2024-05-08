@@ -83,7 +83,7 @@ header, footer {
 
 /* Imagen de portada */
 .hero-section {
-    background-image: url('barberBackground.jpg'); /* Reemplaza con tu imagen */
+    background-image: url('assets/barberBackground.jpg'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
     height: 80vh; /* Ocupa gran parte del viewport */
