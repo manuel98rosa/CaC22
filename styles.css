@@ -135,7 +135,7 @@ label {
 }
 
 input, textarea {
-    width: 50%; /* Campos ocupan todo el ancho */
+    width: 60%; /* Campos ocupan todo el ancho */
     padding: 0.5rem; /* Espacio dentro de los campos */
     border: 1px solid #ccc; /* Bordes grises claros */
     border-radius: 4px; /* Bordes redondeados */
