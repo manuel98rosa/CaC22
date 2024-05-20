@@ -102,6 +102,30 @@ header, footer {
     text-align: center;
 }
 
+.service-box {
+    color: #d3d3d3; /* Letra gris clara */
+    border: 3px solid #e0a106; /* Borde amarillo */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 25px; /* Espacio interno alrededor del texto */
+    position: relative; /* Para posicionar las imágenes dentro de la caja */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    font-family: Arial, sans-serif; /* Fuente */
+    margin: 2rem;
+}
+
+.service-box .service-content {
+    flex: 1;
+    text-align: center; /* Centra el texto */
+}
+
+.service-box img {
+    height: 40px; /* Tamaño de las imágenes */
+    width: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0 10px; /* Espacio alrededor de las imágenes */
+}
+
 /* Sección con fondo mostaza */
 .aboutUs {
     background: #e0a106; /* Fondo mostaza */
