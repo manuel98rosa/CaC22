@@ -1,8 +1,17 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+/*google fonts. Roboto y Dancing Script*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* reset*/ 
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #343434;
 }
 
 /* Navbar transparente */
@@ -21,10 +30,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    font-weight: bold;
+    font-size: large;
 }
 
 .logo-img {
-    height: 60px; /* Tamaño del logo */
+    height: 90px; /* Tamaño del logo */
+    margin-top: 1rem;
+}
+
+.logo-img:hover {
+    cursor: pointer;
+    opacity: 80%;
 }
 
 .navbar-toggle {
@@ -36,8 +53,10 @@ body {
 
 .navbar-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding-right: 20px; /* Para alejar del borde derecho */
+    letter-spacing: 0.1rem;
+    font-weight: 400;
 }
 
 .navbar-links a {
@@ -78,74 +97,142 @@ header, footer {
 
 /* Imagen de portada */
 .hero-section {
-    background-image: url('assets/barberBackground.jpg'); /* Reemplaza con tu imagen */
+    background-image: url('assets/homeBackground.webp'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
-    height: 80vh; /* Ocupa gran parte del viewport */
+    height: 100vh; /* Ocupa gran parte del viewport */
     position: relative; /* Para alinear elementos dentro de la sección */
-   
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
     text-align: center;
     color: white;
     position: absolute; /* Permite posicionar elementos dentro de la sección */
-    top: 30%; /* Ajusta para centrar verticalmente */
+    top: 40%; /* Ajusta para centrar verticalmente */
     width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.hero-title {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-paragraph {
+    font-size: 1.4rem;
+    width: 50%;
 }
 
 
 /* Sección con fondo gris */
 .services{
-    background: #333; /* Fondo gris */
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-services {
+    font-family: "Dancing Script", cursive;
     text-align: center;
+    font-size: 3rem;
+    color: white;
+    padding-top: 4rem;
 }
 
 .service-box {
-    color: #d3d3d3; /* Letra gris clara */
-    border: 3px solid #e0a106; /* Borde amarillo */
+    color: #F4F4F4;
+    border: 3px solid #F3BE41;
     border-radius: 25px; /* Bordes redondeados */
-    padding: 25px; /* Espacio interno alrededor del texto */
-    position: relative; /* Para posicionar las imágenes dentro de la caja */
+    margin: 1rem;
+    box-shadow: 10px 9px 13px -5px rgba(99,93,93,0.75);
+    -webkit-box-shadow: 10px 9px 13px -5px rgba(99,93,93,0.75);
+    -moz-box-shadow: 10px 9px 13px -5px rgba(99,93,93,0.75);
+}
+
+.service-content {
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-    justify-content: space-between; /* Espacio entre los elementos */
-    font-family: Arial, sans-serif; /* Fuente */
-    margin: 2rem;
-}
-
-.service-box .service-content {
-    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center; /* Centra el texto */
+    gap: 0.5rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
 }
 
-.service-box img {
-    height: 40px; /* Tamaño de las imágenes */
-    width: auto; /* Mantiene la proporción de las imágenes */
-    margin: 0 10px; /* Espacio alrededor de las imágenes */
+.image-service-box{
+    height: 80px; /* Tamaño de las imágenes */
 }
 
-/* Sección con fondo mostaza */
+/* Sección nosotros */
 .aboutUs {
-    background: #e0a106; /* Fondo mostaza */
-    padding: 2rem;
+    background: #F3BE41;
+    padding: 2rem 10rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-about {
+    background: #F3BE41;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.image-about {
+    width: 20rem;
+    border-radius: 25px;
+}
+
+.text-about {
+    padding: 1rem 3rem;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    margin-top: 2rem;
+}
+
+.image-about-footer {
+    width: 7rem;
 }
 
 /* Sección con fondo mostaza */
 .contact {
-    background: #333; /* Fondo mostaza */
     padding: 2rem;
     text-align: center;
 }
 
 
 /* Estilos generales para el formulario */
-.contact-section {
-    padding: 2rem; /* Espacio alrededor de la sección */
-    background: #f5f5f5; /* Fondo claro */
+.contact {
+    padding: 4rem; /* Espacio alrededor de la sección */
     text-align: center; /* Centrar el contenido */
+    color: #F4F4F4;
+}
+
+.title-contact {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .form-group {
@@ -155,14 +242,30 @@ header, footer {
 label {
     display: block;
     font-weight: bold; /* Texto en negrita para las etiquetas */
+    margin-top: 2rem;
     margin-bottom: 0.5rem; /* Espacio entre la etiqueta y el campo */
+    color: #F4F4F4;
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 input, textarea {
-    width: 60%; /* Campos ocupan todo el ancho */
+    width: 40%; /* Campos ocupan todo el ancho */
     padding: 0.5rem; /* Espacio dentro de los campos */
-    border: 1px solid #ccc; /* Bordes grises claros */
-    border-radius: 4px; /* Bordes redondeados */
+    border: 2px solid #F3BE41; /* Bordes grises claros */
+    border-radius: 15px; /* Bordes redondeados */
+    background: transparent;
+}
+
+input:focus, textarea:focus {
+    background-color: #f3be412f ;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #F3BE41;
+    font-family: "Roboto", sans-serif;
+    opacity: 50%;
+    padding: 0.3rem 1rem;
 }
 
 textarea {
@@ -170,14 +273,36 @@ textarea {
 }
 
 button {
-    padding: 0.75rem 1.5rem; /* Espacio alrededor del botón */
-    background-color: #e0a106; /* Color del botón */
-    color: white;
+    padding: 0.75rem 8rem; /* Espacio alrededor del botón */
+    background-color: #F3BE41; /* Color del botón */
     border: none;
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 button:hover {
-    background-color: #ba8c1a; /* Color más claro al pasar por el botón */
+    opacity: 80%;
+}
+
+/* footer */
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.logo-footer img {
+    width: 90px;
+}
+
+.text-footer {
+    margin-bottom: 2rem;
 }
