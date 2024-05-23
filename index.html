@@ -21,14 +21,51 @@
                         &#9776; <!-- Ícono de menú (hamburger) -->
                     </button>
                     <div class="navbar-links" id="navbar-links">
+                        <button class="btnReserva" id="btnReserva">Reserva tu turno</button>
                         <a href="#services">Servicios</a>
                         <a href="#aboutUs">Nosotros</a>
-                        <a href="#contact">Contacto</a>
+                        <a href="#contact">Contacto</a>                    
                     </div>
                 </div>
             </nav>            
         </section>
 
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>Reserva tu turno</h2>
+                <h3>A continuación ingresa tus datos</h3>
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <!-- Aquí iría el seleccionador de fecha -->
+                        <input type="text" id="fecha" name="fecha" placeholder="Selecciona una fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora:</label>
+                        <!-- Aquí iría el seleccionador de hora -->
+                        <select id="hora" name="hora" required>
+                            <option value="" disabled selected>Selecciona una hora</option>
+                            <!-- Aquí irían las opciones de hora disponibles -->
+                        </select>
+                    </div>
+                    <button type="submit">Agendar</button>
+                </form>
+            </div>
+        </div>
        <section>
             <div class="hero-content"> <!-- Contenido sobre la imagen de portada -->
                 <h1 class="hero-title">Transformamos tu estilo</h1>
