@@ -134,7 +134,7 @@ header, footer {
     background-image: url('assets/homeBackground.webp'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Ocupa gran parte del viewport */
+    height: 100vh; /* Ocupa todo el viewport */
     position: relative; /* Para alinear elementos dentro de la sección */
 }
 
@@ -163,7 +163,8 @@ header, footer {
 
 .hero-paragraph {
     font-size: 1.4rem;
-    width: 50%;
+    width: 40%;
+    font-weight: 300;
 }
 
 
@@ -359,4 +360,24 @@ button:hover {
 
 .text-footer {
     margin-bottom: 2rem;
+}
+
+/* media queries */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero-section {
+        height: 70vh; /* Ocupa gran parte del viewport */
+    }
+
+    .hero-content {
+        top: 25%; /* Ajusta para centrar verticalmente */
+    }
+
+    .hero-paragraph {
+        font-size: 2rem;
+        width: 70%;
+    }
+
+    .services {
+        flex-direction: row;
+    }
 }
