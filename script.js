@@ -6,6 +6,26 @@ document.getElementById('navbar-toggle').addEventListener('click', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const btnReserva = document.getElementById('btnReserva');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closeBtn');
+
+    btnReserva.addEventListener('click', function() {
+        popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
