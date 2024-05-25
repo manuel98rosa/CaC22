@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro cuando se hace scroll */
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.collapsed .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustar según la altura del navbar */
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar.collapsed .menu a {
+        color: white;
+        padding: 10px 0;
+        text-align: right;
+    }
+}
+
+#calendar-section {
+    padding: 50px;
+    background-color: #d3d3d3; /* Fondo gris para la sección del calendario */
+    margin-top: 80px; /* Para compensar la altura de la barra de navegación fija */
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calendarBox{
+    padding: 20px;
+    background-color: black;
+}

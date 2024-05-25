@@ -53,6 +53,7 @@ body {
 
 .navbar-links {
     display: flex;
+    align-items: center;
     gap: 2rem;
     padding-right: 20px; /* Para alejar del borde derecho */
     letter-spacing: 0.1rem;
@@ -88,6 +89,39 @@ body {
     }
 }
 
+/* Estilos del popup */
+.popup {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Por encima del navbar */
+}
+
+.popup-content {
+    background-color: #6e6666;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 500px; /* Ancho del popup */
+    max-width: 150%; /* Ancho máximo */
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 header, footer {
     background-color: #333;
     color: white;
@@ -100,7 +134,7 @@ header, footer {
     background-image: url('assets/homeBackground.webp'); /* Reemplaza con tu imagen */
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Ocupa gran parte del viewport */
+    height: 100vh; /* Ocupa todo el viewport */
     position: relative; /* Para alinear elementos dentro de la sección */
 }
 
@@ -129,7 +163,8 @@ header, footer {
 
 .hero-paragraph {
     font-size: 1.4rem;
-    width: 50%;
+    width: 40%;
+    font-weight: 300;
 }
 
 
@@ -289,6 +324,26 @@ button:hover {
     opacity: 80%;
 }
 
+.btnReserva{
+    padding: 1rem ; /* Espacio alrededor del botón */
+    background-color: #F3BE41; /* Color del botón */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar por el botón */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    float: right;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btnReserva:hover {
+    opacity: 80%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 /* footer */
 
 .logo-footer {
@@ -305,4 +360,24 @@ button:hover {
 
 .text-footer {
     margin-bottom: 2rem;
+}
+
+/* media queries */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero-section {
+        height: 70vh; /* Ocupa gran parte del viewport */
+    }
+
+    .hero-content {
+        top: 25%; /* Ajusta para centrar verticalmente */
+    }
+
+    .hero-paragraph {
+        font-size: 2rem;
+        width: 70%;
+    }
+
+    .services {
+        flex-direction: row;
+    }
 }

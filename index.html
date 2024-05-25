@@ -21,14 +21,51 @@
                         &#9776; <!-- Ícono de menú (hamburger) -->
                     </button>
                     <div class="navbar-links" id="navbar-links">
+                        <button class="btnReserva" id="btnReserva">Reserva tu turno</button>
                         <a href="#services">Servicios</a>
                         <a href="#aboutUs">Nosotros</a>
-                        <a href="#contact">Contacto</a>
+                        <a href="#contact">Contacto</a>                    
                     </div>
                 </div>
             </nav>            
         </section>
 
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>Reserva tu turno</h2>
+                <h3>A continuación ingresa tus datos</h3>
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <!-- Aquí iría el seleccionador de fecha -->
+                        <input type="text" id="fecha" name="fecha" placeholder="Selecciona una fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora:</label>
+                        <!-- Aquí iría el seleccionador de hora -->
+                        <select id="hora" name="hora" required>
+                            <option value="" disabled selected>Selecciona una hora</option>
+                            <!-- Aquí irían las opciones de hora disponibles -->
+                        </select>
+                    </div>
+                    <button type="submit">Agendar</button>
+                </form>
+            </div>
+        </div>
        <section>
             <div class="hero-content"> <!-- Contenido sobre la imagen de portada -->
                 <h1 class="hero-title">Transformamos tu estilo</h1>
@@ -82,7 +119,7 @@
             <h2 class="title-contact">Contáctanos</h2>
             
             <div>
-                <form id="contactForm"> <!-- ID para validación -->
+                <form id="contactForm" action="https://formsubmit.co/28b956b100969b806b94684ca789bf0f" method="POST"> <!-- ID para validación -->
                     <!-- Campo para el nombre -->
                     <div class="form-group">
                         <label for="name">Nombre</label>
@@ -106,6 +143,8 @@
                         <label for="message">Mensaje</label>
                         <textarea id="message" name="message" required placeholder="Tu mensaje" rows="6"></textarea> <!-- Área de texto grande -->
                     </div>
+
+                    <input type="hidden" name="_autoresponse" value="Hola! Gracias por contactarte con Barber Shop La 22, nuestro horario de atención es de Lunes a Viernes de 10 a 20hs y Sábados de 10 a 13hs. Nos pondremos en contacto a la brevedad. Muchas gracias!.">
         
                     <!-- Botón para enviar -->
                     <button type="submit">Enviar</button>
@@ -122,7 +161,7 @@
                 <img src="assets/logo-footer.png" alt="imagen de contorno de hombre con barba y lentes">
                 <img src="assets/bandera.png" alt="imagen de bandas amarillas y rojas">
             </div>
-            <p class="text-footer">&copy; 2024 Todos los derechos reservados. Barber Shop</p>
+            <p class="text-footer">&copy; 2024 Todos los derechos reservados. Barber Shop La 22</p>
         </footer>
     </body>
 </html>
