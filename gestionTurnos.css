@@ -78,7 +78,7 @@ body, html {
 }
 
 #calendar-section {
-    padding: 20px;
+    padding: 50px;
     background-color: #d3d3d3; /* Fondo gris para la sección del calendario */
     margin-top: 80px; /* Para compensar la altura de la barra de navegación fija */
 }
@@ -86,4 +86,9 @@ body, html {
 #calendar {
     max-width: 900px;
     margin: 0 auto;
+}
+
+.calendarBox{
+    padding: 20px;
+    background-color: black;
 }
