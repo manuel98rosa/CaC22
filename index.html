@@ -5,26 +5,23 @@
         <meta charset="UTF-8">
         <title>Barber Shop La 22</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="script.js" defer></script>
     </head>
     <body>
-    
-        
         <!-- Imagen de portada con navbar transparente -->
         <section class="hero-section"> <!-- Sección de portada -->
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <div class="navbar-container">
                     <div class="logo">
-                        <a href="/"><img src="assets/logoBarber.png" alt="Logo" class="logo-img"></a>
+                        <a href="index.html"><img src="assets/logoBarber.png" alt="Logo" class="logo-img"></a>
                     </div>
                     <button class="navbar-toggle" id="navbar-toggle">
                         &#9776; <!-- Ícono de menú (hamburger) -->
                     </button>
                     <div class="navbar-links" id="navbar-links">
                         <button class="btnReserva" id="btnReserva">Reserva tu turno</button>
-                        <a href="#services">Servicios</a>
-                        <a href="#aboutUs">Nosotros</a>
-                        <a href="#contact">Contacto</a>                    
+                        <a href="#services" class="navLink">Servicios</a>
+                        <a href="#aboutUs" class="navLink">Nosotros</a>
+                        <a href="#contact" class="navLink">Contacto</a>                    
                     </div>
                 </div>
             </nav>            
@@ -163,6 +160,8 @@
             </div>
             <p class="text-footer">&copy; 2024 Todos los derechos reservados. Barber Shop La 22</p>
         </footer>
+        <!-- Scripts -->
+        <script src="script.js" defer></script>
     </body>
 </html>
 

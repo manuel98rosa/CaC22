@@ -2,14 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar');
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
+    let previousScrollPosition = window.scrollY;
 
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+    const activeScroll = () => {
+        let currentScrollPosition = window.scrollY;
+        // Compara la posición actual con la anterior
+        if (currentScrollPosition > previousScrollPosition) {
+            console.log("El usuario está haciendo scroll hacia abajo.");
+            navbar.style.backgroundColor = "black"
         } else {
-            navbar.classList.remove('scrolled');
+            console.log("El usuario está haciendo scroll hacia arriba.");
         }
-    });
+        previousScrollPosition = currentScrollPosition;
+    }
+
+    window.addEventListener('scroll', activeScroll);
 
     hamburger.addEventListener('click', function() {
         navbar.classList.toggle('collapsed');
