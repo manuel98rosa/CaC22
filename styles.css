@@ -287,6 +287,24 @@ header, footer {
     margin-top: 2rem;
 }
 
+/* Media queries para diferentes tamaños de pantalla */
+@media (min-width: 768px) {
+    .aboutUs {
+        flex-direction: row; /* Alineación horizontal en pantallas medianas y grandes */
+    }
+
+    .image-about {
+        margin: 0 2rem 0 0; /* Espaciado a la derecha */
+    }
+
+    .text-about {
+        align-items: flex-start; /* Alinear texto a la izquierda */
+        text-align: left; /* Alinear texto a la izquierda */
+        padding: 0; /* Eliminar padding extra */
+        margin-top: 0; /* Eliminar margen superior extra */
+    }
+}
+
 @media (max-width: 1200px) {
     .aboutUs {
         padding: 2rem 5rem; /* Reducir el padding en pantallas medianas */
@@ -304,6 +322,7 @@ header, footer {
 @media (max-width: 768px) {
     .aboutUs {
         padding: 2rem 2rem; /* Reducir más el padding en pantallas pequeñas */
+        flex-direction: column; /* Alineación vertical en pantallas pequeñas */
     }
 
     .title-about {
@@ -318,6 +337,8 @@ header, footer {
     .text-about {
         padding: 1rem 1rem; /* Ajustar el padding en pantallas pequeñas */
         font-size: 16px; /* Ajustar el tamaño de la fuente */
+        align-items: center; /* Centrar texto en pantallas pequeñas */
+        text-align: center; /* Centrar texto en pantallas pequeñas */
     }
 }
 
