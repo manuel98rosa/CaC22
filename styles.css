@@ -172,6 +172,7 @@ header, footer {
 .services{
     padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -210,12 +211,44 @@ header, footer {
     height: 80px; /* Tamaño de las imágenes */
 }
 
+@media (max-width: 1200px) {
+    .service-box {
+        width: calc(50% - 2rem); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        width: calc(100% - 2rem); /* Una columna en pantallas pequeñas */
+    }
+
+    .title-services {
+        font-size: 2.5rem; /* Ajustar el tamaño del título */
+    }
+}
+
+@media (max-width: 480px) {
+    .title-services {
+        font-size: 2rem; /* Ajustar el tamaño del título */
+    }
+
+    .service-box {
+        margin: 0.5rem; /* Reducir el margen en pantallas muy pequeñas */
+    }
+
+    .service-content {
+        padding: 0.5rem 1rem; /* Ajustar el padding en pantallas muy pequeñas */
+    }
+}
+
+
 /* Sección nosotros */
 .aboutUs {
     background: #F3BE41;
     padding: 2rem 10rem;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -227,11 +260,13 @@ header, footer {
     font-size: 3rem;
     text-align: center;
     padding-top: 4rem;
+    width: 100%;
 }
 
 .image-about {
     width: 20rem;
     border-radius: 25px;
+    margin-bottom: 2rem;
 }
 
 .text-about {
@@ -244,10 +279,64 @@ header, footer {
     gap: 1rem;
     color: white;
     margin-top: 2rem;
+    max-width: 800px;
 }
 
 .image-about-footer {
     width: 7rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .aboutUs {
+        padding: 2rem 5rem; /* Reducir el padding en pantallas medianas */
+    }
+
+    .title-about {
+        font-size: 2.5rem; /* Ajustar el tamaño del título */
+    }
+
+    .text-about {
+        padding: 1rem 2rem; /* Ajustar el padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutUs {
+        padding: 2rem 2rem; /* Reducir más el padding en pantallas pequeñas */
+    }
+
+    .title-about {
+        font-size: 2rem; /* Ajustar el tamaño del título */
+        padding-top: 2rem; /* Ajustar el padding superior */
+    }
+
+    .image-about {
+        width: 15rem; /* Ajustar el tamaño de la imagen */
+    }
+
+    .text-about {
+        padding: 1rem 1rem; /* Ajustar el padding en pantallas pequeñas */
+        font-size: 16px; /* Ajustar el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .title-about {
+        font-size: 1.8rem; /* Ajustar el tamaño del título */
+    }
+
+    .image-about {
+        width: 100%; /* Ajustar la imagen al 100% del contenedor */
+    }
+
+    .text-about {
+        font-size: 14px; /* Ajustar el tamaño de la fuente */
+    }
+
+    .image-about-footer {
+        width: 5rem; /* Ajustar el tamaño de la imagen del footer */
+    }
 }
 
 /* Sección con fondo mostaza */
